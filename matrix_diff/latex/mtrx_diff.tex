@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Matrix Calculus Note}
+\author{Yi Jiang}
+
+\begin{document}
+    \maketitle
+    \newtheorem{theorem}{Theorem}
+
+\section{Introductory Example}
+\begin{equation}
+    \frac{\partial f}{\partial x} = a
+\end{equation}
+for multivariate, we have:
+$$ f(x) = \sum_i a_i x_i = a^T x $$
+$$ \frac{\partial f }{\partial x_k} = \frac{\partial(\sum_i a_i x_i)}{\partial x_k } = a_k $$
+Thenn we organize n partial derivatives in the following way:
+\begin{equation}
+    \frac{\partial f }{\partial x } = 
+    \begin{bmatrix}
+        \frac{\partial f}{\partial x_1 } \\
+        \frac{\partial f}{\partial x_2} \\
+        \vdots \\
+        \frac{\partial f}{\partial x_n} 
+    \end{bmatrix}
+    = \begin{bmatrix}
+        a_1 \\
+        a_2 \\
+        \vdots \\
+        a_n
+    \end{bmatrix}
+    = a
+\end{equation}
+
+
+\section{Derivation}
+
+\subsection{Organization of Elements}
+
+For a scalar valued function $f(x)$, the result of $\frac{\partial f}{\partial x} $ has the same size with x. That 
+\begin{equation}
+    \frac{\partial f}{\partial x} =
+    \begin{bmatrix}
+        \frac{\partial f}{\partial x_{11}} & \frac{\partial f}{\partial x_{12}} & \cdots & \frac{\partial f}{\partial x_{1n}} \\
+        \frac{\partial f}{\partial x_{21}} & \frac{\partial f}{\partial x_{22}} & \cdots & \frac{\partial f}{\partial x_{2n}} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \frac{\partial f}{\partial x_{m1}} & \frac{\partial f}{\partial x_{m2}} & \cdots & \frac{\partial f}{\partial x_{mn}}
+    \end{bmatrix}
+\end{equation}
+By this definition, we have:
+$$ \frac{\partial f}{\partial x} = ( \frac{\partial f}{\partial x})^T = a^T $$
+
+\subsection{Deal with Inner Product}
+For $f(x) = a^T x$, we have$ \frac{\partial f}{\partial
+x} = a $.
+
+\subsection{Properties of Trace}
+Defintion 2. Trace $ Tr [A] = \sum_i A_{ii} $
+$\frac{\partial Tr [A] }{\partial A} = I$
+\begin{theorem}
+    Matrix traces has the following properties.
+    \begin{enumerate}
+        \item Tr[$A^TB$] = $\sum_i\sum_j A_{ij}B{ij}$
+    \end{enumerate}
+\end{theorem}
+If therel's a multivariate scalar function $f(x)$ = Tr[$A^Tx$], we have $\frac{\partial f}{\partial x} = A $.
+
+\subsection{Deal with Generalized Inner Product}
+
+\subsection{Define Matrix Differential}
+dTr[$A$] = Tr[d$A$]
+
+d$f$ = Tr$\left[ (\frac{\partial f}{\partial x})^T d x \right] $
+
+\subsection{Matrix Differential Properties}
+
+eg. 4. Given function $ f(x) = x^T A x$, where $A$ is square and x is a column vertor, we can compute:
+
+eg. 5. $d(X^{-1}) = -X^{-1}dX X^{-1} $.
+
+\subsection{Schame of Handlding Scalar Function}
+
+\subsection{Determinant}
+
+
+
+
+
+\end{document}
